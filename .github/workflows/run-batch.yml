@@ -1,0 +1,13 @@
+name: Run Batch File
+
+on:
+  workflow_dispatch:  # allows you to manually run it from GitHub
+
+jobs:
+  run-batch:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run run.bat
+        run: ./run.bat
+        shell: cmd
